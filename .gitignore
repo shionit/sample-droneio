@@ -12,8 +12,6 @@
 hs_err_pid*
 
 .gradle/
-gradle/
-gradlew*
 build/
 
 ### JetBrains.gitignore
