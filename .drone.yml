@@ -1,8 +1,12 @@
-build:
-  image: amazoncorretto:8
-  environment:
-    - GRADLE_USER_HOME=~/.gradle
-    - JAVA_HOME=/usr/lib/jvm/java-1.8.0-amazon-corretto.x86_64
-  commands:
-    - ./gradlew javadoc check
+kind: pipeline
+name: default
+
+steps:
+  - name: build
+    image: amazoncorretto:8
+    environment:
+      GRADLE_USER_HOME: ~/.gradle
+      JAVA_HOME: /usr/lib/jvm/java-1.8.0-amazon-corretto.x86_64
+    commands:
+      - ./gradlew javadoc check
 
