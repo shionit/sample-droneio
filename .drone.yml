@@ -1,7 +1,8 @@
 build:
-  image: java:openjdk-8
+  image: amazoncorretto:8
   environment:
     - GRADLE_USER_HOME=~/.gradle
+    - JAVA_HOME=/usr/lib/jvm/java-1.8.0-amazon-corretto.x86_64
   commands:
     - ./gradlew javadoc check
 
